@@ -133,6 +133,31 @@ npm install
 npm run dev          # http://localhost:3000
 ```
 
+### epa-standards-client-go
+**Para clientes Go reutilizables**
+
+```
+epa-standards-client-go/
+├── client.go           # Main client implementation
+├── types.go            # Request/response types
+├── errors.go           # Error handling
+├── client_test.go      # Unit tests with httptest
+├── examples/
+│   └── main.go         # Usage example
+├── go.mod
+├── CLAUDE.md          # Guía completa
+└── README.md
+```
+
+**Quick start:**
+```bash
+git clone https://github.com/epa-datos/epa-standards-client-go.git my-client
+cd my-client
+go mod download
+go test -v ./...       # Run tests
+go run ./examples/main.go  # Run example
+```
+
 ---
 
 ## 🔄 Git Workflow
@@ -164,7 +189,7 @@ Ver [BRANCHING-STRATEGY.md](./docs/BRANCHING-STRATEGY.md) para detalles.
 | **Backend API** | Go 1.22+ | Cloud Run | epa-standards-backend |
 | **Frontend SPA** | NextJS 15+ | Cloud Run | epa-standards-frontend |
 | **Full Stack** | NextJS + Go | Cloud Run | epa-standards-fullapp |
-| **Internal Client** | Go 1.22+ | GitHub Packages | N/A (simple) |
+| **Internal Client** | Go 1.22+ | GitHub Packages | epa-standards-client-go |
 
 ---
 
